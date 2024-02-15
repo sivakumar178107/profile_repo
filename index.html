@@ -98,7 +98,7 @@
           </section>
       </div>
     </div>
-<section id="about-me" class="about-section d-none">
+<section id="about-me" class="about-section ">
   <div class="container">
     <div class="row">
      
@@ -147,7 +147,7 @@
   </div>
 </section>
 
-  <div class="custom-card w-100 p-5 align-items-center justify-content-center d-none" style="width: 18rem;">
+  <div class="custom-card w-100 p-5 align-items-center justify-content-center " style="width: 18rem;">
     <div class="custom-card-body">
       <h5 class="custom-card-title"><i class="fas fa-handshake custom-icon mr-3"></i>Nursing Pledge</h5>
      
@@ -181,7 +181,7 @@ I will endeavour to maintain up to date knowledge and skill to uphold standard o
 
  
 
-        <div class="container py-5 d-none">
+        <div class="container py-5 ">
           <!-- Personal Information -->
           <section id="personal-info" class="mb-5">
             <h2 class="display-4 mb-4">Personal Information</h2>
@@ -408,11 +408,11 @@ window.onload = generateCarouselItems;
   // Function to handle scroll event
   function handleScroll() {
     console.log("triggered")
-    var sections = document.querySelectorAll('.d-none');
+    var sections = document.querySelectorAll('.');
     sections.forEach(function(section) {
       if (isInViewport(section)) {
         section.classList.add('fade-up');
-        section.classList.remove('d-none');
+        section.classList.remove('');
       }
     });
   }

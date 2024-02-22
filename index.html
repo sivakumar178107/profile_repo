@@ -80,7 +80,7 @@
                   <div class="row">
                       <div class="col">
                           <h1>Jinson Anto Charls</h1>
-                          <p>Director of Recovery and Rehabilitation Services</p>
+                          <p>GAICD. MNurs (MH). GradCert Leadersh. BNurs.</p>
                           <p class="text-center mb-4">Follow Me on Social Media</p>
                           <ul class="social-icons">
                               <li><a href="#" target="_blank" title="Facebook"><i
@@ -89,12 +89,12 @@
                               </li>
                               <li><a href="#" target="_blank" title="Instagram"><i
                                           class="fab fa-instagram"></i></a></li>
-                              <li><a href="#" target="_blank" title="LinkedIn"><i
+                              <li><a href="https://www.linkedin.com/in/jinson-anto-charls-gaicd-84034b15b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn"><i
                                           class="fab fa-linkedin-in"></i></a></li>
                               <!-- Add more social media icons as needed -->
                           </ul>
                           <div class="w-100 d-flex flex-row justify-content-center">
-                            <a href="#" class="btn btn-primary custom-btn">About Me</a>
+                            <a href="#" class="btn btn-primary custom-btn" onclick="scrollToAbout()">About Jinson</a>
                             <a href="#" class="btn btn-secondary custom-btn ">Donate</a>
                           </div>
                       </div>
@@ -110,12 +110,12 @@
      
       <div class="col-md-6">
         <div class="about-image">
-          <img src="profile_pic.jpg" alt="About Me Image">
+          <img src="profile_pic.jpg" alt="About Jinson Image">
         </div>
       </div>
       <div class="col-md-6">
         <div class="about-text" >
-          <h2 class="about-heading">About Me</h2>
+          <h2 class="about-heading">About Jinson</h2>
           <p class="about-description">
             Originally from the lush landscapes of Kerala in India, a region often described as 'God's own country' for its tranquil beauty and harmonious melding of diverse cultures, Jinson's story is a testament to the power of dedication and the universal language of care. In Kerala, known for its impressive literacy rate, Jinson embarked on his noble journey in English Medium institutions, establishments nurtured by the caring hands of Catholic priests and nuns. His academic pursuits culminated in a Bachelor's degree in Nursing and Midwifery, and with remarkable swiftness, he earned his eligibility certificate from the Australian Health Practitioners Regulatory Authority.
 
@@ -321,7 +321,13 @@ I will endeavour to maintain up to date knowledge and skill to uphold standard o
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                While Jinson has not explicitly declared his candidacy for political office, his family background and personal values strongly indicate a potential future in politics. His family's legacy of leadership and service, coupled with his own dedication to community engagement and advocacy, lay a solid foundation for him to pursue a career in politics. Jinson's commitment to social causes and his leadership roles within community organizations underscore his readiness to step into the political arena and make a positive impact on a larger scale.
+                Jinson Anto Charls, a figure known for his profound commitment to healthcare and community service, has recently embarked on a new and significant journey in his professional life. Demonstrating a natural progression from his extensive leadership experience and community involvement, Jinson has been preselected by the Country Liberal Party for the Sanderson seat in the Northern Territory's upcoming election in August 2024.
+
+This decision by the Country Liberal Party acknowledges Jinson's deep-rooted connection to community service and his outstanding leadership skills, honed through years of dedicated work in tertiary health services. His educational background, including a Bachelor's in Nursing and a Master's in Mental Health Nursing, along with advanced studies in leadership, have equipped him with a unique blend of expertise and perspective crucial for public service. 
+
+Jinson's journey is strongly influenced by his family's legacy of service and leadership, particularly visible in the careers of his father and uncle in Kerala, India. This backdrop, combined with his own extensive involvement in community organisations and advocacy for social causes, makes his foray into politics a natural and promising progression. 
+
+With this preselection, Jinson Anto Charls is not only continuing his family's tradition of public service but also bringing his rich tapestry of professional experiences and personal values to the political landscape of Northern Territory, Australia. His candidacy represents a commitment to harnessing his leadership and expertise for the greater good of the community, signalling a new era of potential and positive change in the region.
               </div>
             </div>
           </div>
@@ -333,7 +339,11 @@ I will endeavour to maintain up to date knowledge and skill to uphold standard o
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                Jinson's extensive professional experience as a healthcare professional and community leader equips him with the skills and insights necessary for effective political leadership. His tenure as the Director of Recovery and Rehabilitation Services at Top End Mental Health, Alcohol and Other Drug Services has honed his strategic planning abilities, management expertise, and collaborative leadership style. These qualities, combined with his strong ethical compass and commitment to serving the public good, position him as a capable and principled leader ready to tackle the challenges of political office.
+                inson Anto Charls' transition from a healthcare professional and community leader to a political figure is underpinned by a wealth of experience he plans to leverage in his new role. His tenure in the leadership roles at the Tertiary Health Services has been instrumental in sharpening his strategic planning skills, honing his management expertise, and refining his ability to lead collaboratively.
+
+Jinson's professional journey in healthcare has imbued him with a deep understanding of community needs, an invaluable skill set in political leadership. He has consistently demonstrated an ability to navigate complex systems, manage substantial budgets effectively, and lead diverse teams towards common goals. His experience in handling critical roles, such as managing operations during the challenging Covid-19 period, showcases his resilience and adaptability, qualities essential for political leadership.
+
+Moreover, his strong ethical compass, coupled with a steadfast commitment to serving the public good, positions him as a principled and capable leader. These qualities, born out of his professional experiences and personal values, are what Jinson Anto Charls plans to bring to the forefront as he tackles the multifaceted challenges of political office. His candidacy promises not just a continuation of his service to the community but an expansion of his impact, translating his professional acumen into effective and compassionate political leadership.
               </div>
             </div>
           </div>
@@ -357,7 +367,11 @@ I will endeavour to maintain up to date knowledge and skill to uphold standard o
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-     
+      <div id="gridContainer" class="grid-container d-none">
+        
+        <!-- Add more grid items as needed -->
+      </div>
+      <button class="btn btn-primary mt-3" onclick="toggleGalleryView()">Toggle Gallery View</button>
     </div>
     <footer class="footer mt-auto py-3 bg-light">
       <div class="container text-center">
@@ -366,17 +380,190 @@ I will endeavour to maintain up to date knowledge and skill to uphold standard o
     </footer>
     
   <script>
-    function toggleCollapse(sectionId) {
-    // Get all sections
-    var sections = document.querySelectorAll('section');
-    // Collapse all sections except the one with sectionId
-    sections.forEach(function(section) {
-      if (section.id !== sectionId) {
-        section.classList.remove('show');
+//     function toggleGalleryView() {
+//     const carousel = document.getElementById('carouselExampleAutoplaying');
+//     const gridContainer = document.getElementById('gridContainer');
+
+//     if (carousel.classList.contains('d-none')) {
+//       carousel.classList.remove('d-none');
+//       gridContainer.classList.add('d-none');
+//     } else {
+//       carousel.classList.add('d-none');
+//       gridContainer.classList.remove('d-none');
+//     }
+//   }
+//   function scrollToAbout() {
+//     const aboutSection = document.getElementById('about-me');
+//     aboutSection.scrollIntoView({ behavior: 'smooth' });
+//   }
+
+
+//     function toggleCollapse(sectionId) {
+//     // Get all sections
+//     var sections = document.querySelectorAll('section');
+//     // Collapse all sections except the one with sectionId
+//     sections.forEach(function(section) {
+//       if (section.id !== sectionId) {
+//         section.classList.remove('show');
+//       }
+//     });
+//   }
+//     const imageFileNames = [
+//       "IMG-20240218-WA0013.jpg",
+//       "IMG-20240218-WA0014.jpg",
+//       "IMG-20240218-WA0015.jpg",
+//       "IMG-20240218-WA0016.jpg",
+//       "IMG-20240218-WA0017.jpg",
+//       "IMG-20240218-WA0018.jpg",
+//       "IMG-20240218-WA0019.jpg",
+//       "IMG-20240218-WA0020.jpg",
+//       "IMG-20240218-WA0021.jpg",
+//       "IMG-20240218-WA0022.jpg",
+//     "IMG-20240122-WA0094.jpg",
+//     "IMG-20240122-WA0087.jpg",
+//     "IMG-20240122-WA0088.jpg",
+//     "IMG-20240122-WA0089.jpg",
+//     "IMG-20240122-WA0090.jpg",
+//     "IMG-20240122-WA0086.jpg",
+//     "IMG-20240122-WA0074.jpg",
+//     "IMG-20240122-WA0075.jpg",
+//     "IMG-20240122-WA0072.jpg",
+//     "IMG-20240122-WA0073.jpg",
+//     "IMG-20240122-WA0068.jpg",
+//     "IMG-20240122-WA0069.jpg",
+//     "IMG-20240122-WA0070.jpg",
+//     "IMG-20240122-WA0071.jpg",
+//     "IMG-20240122-WA0065.jpg",
+//     "IMG-20240122-WA0066.jpg",
+//     "IMG-20240122-WA0067.jpg",
+//     "IMG-20240122-WA0062.jpg",
+//     "IMG-20240122-WA0063.jpg",
+//     "IMG-20240122-WA0064.jpg",
+//     "IMG-20240122-WA0058.jpg",
+//     "IMG-20240122-WA0059.jpg",
+//     "IMG-20240122-WA0060.jpg",
+//     "IMG-20240122-WA0061.jpg",
+//     "IMG-20240122-WA0054.jpg",
+//     "IMG-20240122-WA0055.jpg",
+//     "IMG-20240122-WA0056.jpg",
+//     "IMG-20240122-WA0057.jpg",
+//     "IMG-20240122-WA0050.jpg",
+//     "IMG-20240122-WA0051.jpg",
+//     "IMG-20240122-WA0052.jpg",
+//     "IMG-20240122-WA0053.jpg",
+//     "IMG-20240122-WA0048.jpg",
+//     "IMG-20240122-WA0049.jpg",
+//     "IMG-20240122-WA0035.jpg",
+//     "IMG-20240122-WA0036.jpg",
+//     "IMG-20240122-WA0032.jpg",
+//     "IMG-20240122-WA0033.jpg",
+//     "IMG-20240122-WA0034.jpg",
+//     "IMG-20240122-WA0031.jpg",
+//     "IMG-20230924-WA0002.jpg",
+//     "IMG-20240122-WA0098.jpg",
+//     "IMG-20240122-WA0097.jpg",
+//     "IMG-20240122-WA0096.jpg",
+//     "IMG-20240122-WA0095.jpg",
+//     "IMG-20240122-WA0091.jpg",
+//     "IMG-20240122-WA0092.jpg",
+//     "IMG-20240122-WA0093.jpg"
+// ];
+
+// // Function to generate carousel items
+// function generateCarouselItems() {
+//     const carouselInner = document.getElementById('carousel-inner');
+//     let carouselItems = '';
+
+//     imageFileNames.forEach((fileName, index) => {
+//         const active = index === 0 ? 'active' : '';
+//         const imageUrl = `${fileName}`; // Update the path as per your directory structure
+//         const carouselItem = `
+//             <div class="carousel-item ${active}" style="width:100%">
+//                 <img src="${imageUrl}" style="height:20rem;max-width:100%" alt="Image ${index + 1}">
+//             </div>`;
+//         carouselItems += carouselItem;
+//     });
+
+//     carouselInner.innerHTML = carouselItems;
+// }
+
+// // Call the function to generate carousel items when the page loads
+// window.onload = generateCarouselItems;
+
+ 
+    
+    
+
+
+
+
+//   // Function to check if an element is in viewport
+//   function isInViewport (ele) {
+//   const { top, bottom } = ele.getBoundingClientRect();
+//   const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+
+//   return (
+//     (top > 0 || bottom > 0) &&
+//     top < vHeight
+//   );
+// }
+
+//   // Function to handle scroll event
+//   function handleScroll() {
+//     console.log("triggered")
+//     var sections = document.querySelectorAll('.');
+//     sections.forEach(function(section) {
+//       if (isInViewport(section)) {
+//         section.classList.add('fade-up');
+//         section.classList.remove('');
+//       }
+//     });
+//   }
+
+//   // Add scroll event listener
+//   window.addEventListener('scroll', handleScroll);
+//   // Call handleScroll once on page load to check initial state
+//   handleScroll();
+
+function toggleGalleryView() {
+      const carousel = document.getElementById('carouselExampleAutoplaying');
+      const gridContainer = document.getElementById('gridContainer');
+
+      if (carousel.classList.contains('d-none')) {
+        carousel.classList.remove('d-none');
+        gridContainer.classList.add('d-none');
+      } else {
+        carousel.classList.add('d-none');
+        gridContainer.classList.remove('d-none');
+        slideImagesInGrid(); // Start sliding images in grid view
       }
-    });
-  }
-    const imageFileNames = [
+    }
+
+    function scrollToAbout() {
+      const aboutSection = document.getElementById('about-me');
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function toggleCollapse(sectionId) {
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        if (section.id !== sectionId) {
+          section.classList.remove('show');
+        }
+      });
+    }
+
+        const imageFileNames = [
+      "IMG-20240218-WA0013.jpg",
+      "IMG-20240218-WA0014.jpg",
+      "IMG-20240218-WA0015.jpg",
+      "IMG-20240218-WA0016.jpg",
+      "IMG-20240218-WA0017.jpg",
+      "IMG-20240218-WA0018.jpg",
+      "IMG-20240218-WA0019.jpg",
+      "IMG-20240218-WA0020.jpg",
+      "IMG-20240218-WA0021.jpg",
+      "IMG-20240218-WA0022.jpg",
     "IMG-20240122-WA0094.jpg",
     "IMG-20240122-WA0087.jpg",
     "IMG-20240122-WA0088.jpg",
@@ -427,63 +614,83 @@ I will endeavour to maintain up to date knowledge and skill to uphold standard o
     "IMG-20240122-WA0093.jpg"
 ];
 
-// Function to generate carousel items
-function generateCarouselItems() {
-    const carouselInner = document.getElementById('carousel-inner');
-    let carouselItems = '';
+    // Function to generate carousel items
+    function generateCarouselItems() {
+      const carouselInner = document.getElementById('carousel-inner');
+      let carouselItems = '';
 
-    imageFileNames.forEach((fileName, index) => {
+      imageFileNames.forEach((fileName, index) => {
         const active = index === 0 ? 'active' : '';
         const imageUrl = `${fileName}`; // Update the path as per your directory structure
         const carouselItem = `
-            <div class="carousel-item ${active}" style="width:100%">
-                <img src="${imageUrl}" style="height:20rem;max-width:100%" alt="Image ${index + 1}">
-            </div>`;
+          <div class="carousel-item ${active}" style="width:100%">
+            <img src="${imageUrl}" style="height:20rem;max-width:100%" alt="Image ${index + 1}">
+          </div>`;
         carouselItems += carouselItem;
-    });
+      });
 
-    carouselInner.innerHTML = carouselItems;
-}
-
-// Call the function to generate carousel items when the page loads
-window.onload = generateCarouselItems;
-
- 
-    
-    
-
-
-
-
-  // Function to check if an element is in viewport
-  function isInViewport (ele) {
-  const { top, bottom } = ele.getBoundingClientRect();
-  const vHeight = (window.innerHeight || document.documentElement.clientHeight);
-
-  return (
-    (top > 0 || bottom > 0) &&
-    top < vHeight
-  );
-}
-
-  // Function to handle scroll event
-  function handleScroll() {
-    console.log("triggered")
-    var sections = document.querySelectorAll('.');
-    sections.forEach(function(section) {
-      if (isInViewport(section)) {
-        section.classList.add('fade-up');
-        section.classList.remove('');
-      }
+      carouselInner.innerHTML = carouselItems;
+    }
+    function createGridItems() {
+    const gridContainer = document.getElementById('gridContainer');
+    imageFileNames.forEach((filename, index) => {
+      const gridItem = document.createElement('div');
+      gridItem.classList.add('grid-item');
+      gridItem.innerHTML = `<img src="${filename}" alt="Image ${index + 1}">`;
+      gridContainer.appendChild(gridItem);
     });
   }
+    // Call the function to generate carousel items when the page loads
+    window.onload = function() {
+      generateCarouselItems();
+      createGridItems();
+    };
 
-  // Add scroll event listener
-  window.addEventListener('scroll', handleScroll);
-  // Call handleScroll once on page load to check initial state
-  handleScroll();
+    // Function to check if an element is in viewport
+    function isInViewport(ele) {
+      const { top, bottom } = ele.getBoundingClientRect();
+      const vHeight = (window.innerHeight || document.documentElement.clientHeight);
 
+      return (
+        (top > 0 || bottom > 0) &&
+        top < vHeight
+      );
+    }
 
+    // Function to handle scroll event
+    function handleScroll() {
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        if (isInViewport(section)) {
+          section.classList.add('fade-up');
+          section.classList.remove('');
+        }
+      });
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    // Call handleScroll once on page load to check initial state
+    handleScroll();
+
+    // Function to slide images in the grid view
+    function slideImagesInGrid() {
+      const gridItems = document.querySelectorAll('#gridContainer .grid-item img');
+      const interval = 3000; // Interval in milliseconds for automatic sliding
+
+      let currentIndex = 0;
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % gridItems.length;
+        gridItems.forEach((item, index) => {
+          if (index === currentIndex) {
+            item.style.opacity = 1;
+          } else {
+            item.style.opacity = 0;
+          }
+        });
+      }, interval);
+    }
 
 
 

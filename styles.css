@@ -162,7 +162,7 @@ section {
 .about-description {
   font-size: 1rem;
   color: #fff;
-  max-height: 30rem;
+  max-height: 41rem;
   overflow-y: auto;
   animation: slideInRight 1s ease;
 }
@@ -250,4 +250,13 @@ section {
 .social-media .social-icons li a:hover {
   background-color: #0056b3;
   text-decoration: none;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
+  grid-gap: 10px; /* Adjust as needed */
+}
+.grid-item img {
+  width: 100%;
+  height: auto;
 }

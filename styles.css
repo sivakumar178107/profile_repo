@@ -1,6 +1,67 @@
 body {
   background: linear-gradient(135deg, #335a74, #79478f);
+  text-wrap: pretty;
+  box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
   color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+  -webkit-font-smoothing: antialiased; /* For smoother font rendering in WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* For smoother font rendering in macOS Firefox */
+}
+body {
+  font-size: 1rem; /* Bootstrap's default font size */
+  line-height: 1.5; /* Bootstrap's default line height */
+}
+
+/* Adjust specific text elements */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+/* Custom CSS */
+@media (max-width: 768px) {
+  /* Apply styles for screens smaller than or equal to 768px */
+  body {
+    font-size: 0.875rem; /* Adjust font size */
+  }
+  .image-section h2 {
+    font-size: 1rem; /* Adjust font size */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  /* Apply styles for screens between 769px and 992px */
+  body {
+    font-size: 1rem; /* Default font size */
+  }
+  .image-section h2 {
+    font-size: 1.25rem; /* Adjust font size */
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  /* Apply styles for screens between 993px and 1200px */
+  body {
+    font-size: 1.125rem; /* Adjust font size */
+  }
+  .image-section h2 {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+}
+
+@media (min-width: 1201px) {
+  /* Apply styles for screens larger than or equal to 1201px */
+  body {
+    font-size: 1.25rem; /* Adjust font size */
+  }
+  .image-section h2 {
+    font-size: 1.75rem; /* Adjust font size */
+  }
 }
 
 /* Custom animation for fade-up effect */
@@ -26,13 +87,18 @@ section {
 #achievements,
 #community-involvement,
 #family-background {
-  background: linear-gradient(135deg, #3498db, #8e44ad);
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
   color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 /* Additional styles for images */
 .image-section {
-  width: 75%;
+  width: 85%;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -107,21 +173,51 @@ section {
     opacity: 1;
   }
 }
+.custom-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .custom-card {
+  width: 100%;
+  max-width: 85%; /* Adjust as needed */
   border-radius: 1rem;
   transition: transform 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .custom-card:hover {
   transform: translateY(-5px);
 }
 
-.custom-card-title,
-.custom-card-text {
+.custom-card-body {
+  
+  border-radius: 16px;
+  box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+  color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+.custom-card-title {
   color: #fff;
   text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
+
+.custom-card-text {
+  color: #fff;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+.custom-card-text p {
+  margin-bottom: 1rem;
+}
+
+
 
 .custom-btn {
   margin-top: 1rem;
@@ -132,12 +228,6 @@ section {
   margin-right: 1rem;
 }
 
-.custom-card-body {
-  background: linear-gradient(135deg, #3498db, #8e44ad);
-  color: white !important;
-  border-radius: 1rem;
-  padding: 1rem;
-}
 
 .custom-btn {
   transition: transform 0.3s ease;
@@ -252,7 +342,7 @@ section {
   text-decoration: none;
 }
 
-.row {
+.row-flex {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
@@ -270,7 +360,62 @@ section {
 }
 
 .column img {
-  margin-top: 8px;
+  
   vertical-align: middle;
 }
-  
+  /* Custom CSS for education cards */
+.education-card {
+  background-color: #f8f9fa; /* Background color of the card */
+  border: none; /* Remove border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+.education-card:hover {
+  transform: translateY(-5px); /* Lift card slightly on hover */
+}
+
+.education-card .card-body {
+  padding: 20px; /* Add padding inside the card */
+}
+
+.education-card h3 {
+  color: #333; /* Title color */
+  font-size: 1.2rem; /* Title font size */
+  margin-bottom: 10px; /* Bottom margin for separation */
+}
+
+.education-card p {
+  color: #666; /* Text color */
+  font-size: 1rem; /* Text font size */
+  margin-bottom: 0; /* Remove default bottom margin */
+}
+.experience-card {
+  background-color: #fff; /* Background color of the card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px; /* Add padding inside the card */
+}
+
+.experience-card h3 {
+  color: #0066cc; /* Title color */
+  font-size: 1.5rem; /* Title font size */
+  margin-bottom: 10px; /* Bottom margin for separation */
+}
+
+.experience-card p {
+  color: #333; /* Text color */
+  font-size: 1.1rem; /* Text font size */
+  margin-bottom: 5px; /* Bottom margin for separation */
+}
+
+.experience-card ul {
+  list-style-type: none; /* Remove bullet points */
+  padding-left: 0; /* Remove default padding */
+}
+
+.experience-card ul li {
+  color: #555; /* Text color for list items */
+  margin-bottom: 5px; /* Bottom margin for separation */
+}

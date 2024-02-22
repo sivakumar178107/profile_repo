@@ -47,7 +47,7 @@ p {
 @media (min-width: 993px) and (max-width: 1200px) {
   /* Apply styles for screens between 993px and 1200px */
   body {
-    font-size: 1.125rem; /* Adjust font size */
+    font-size: 1rem; /* Adjust font size */
   }
   .image-section h2 {
     font-size: 1.5rem; /* Adjust font size */
@@ -418,4 +418,63 @@ section {
 .experience-card ul li {
   color: #555; /* Text color for list items */
   margin-bottom: 5px; /* Bottom margin for separation */
+}
+.custom-image-container {
+  position: relative;
+  width: 100%;
+}
+
+.custom-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+}
+
+.custom-image-overlay .custom-social-media {
+  padding: 20px; /* Add padding to the social media section */
+}
+
+.custom-image-overlay h1,
+.custom-image-overlay p,
+.custom-image-overlay .btn {
+  color: white; /* Text color */
+}
+
+.custom-social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.custom-social-icons li:last-child {
+  margin-right: 0;
+}
+
+.custom-social-icons li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color 0.3s;
+}
+
+.custom-social-icons li a:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
+
+.custom-btn {
+  margin-top: 1rem;
+  margin-right: 10px;
 }

@@ -251,12 +251,26 @@ section {
   background-color: #0056b3;
   text-decoration: none;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
-  grid-gap: 10px; /* Adjust as needed */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
 }
-.grid-item img {
-  width: 100%;
-  height: auto;
+.image-section h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+  

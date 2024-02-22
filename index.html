@@ -339,7 +339,7 @@ With this preselection, Jinson Anto Charls is not only continuing his family's t
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                inson Anto Charls' transition from a healthcare professional and community leader to a political figure is underpinned by a wealth of experience he plans to leverage in his new role. His tenure in the leadership roles at the Tertiary Health Services has been instrumental in sharpening his strategic planning skills, honing his management expertise, and refining his ability to lead collaboratively.
+                Jinson Anto Charls' transition from a healthcare professional and community leader to a political figure is underpinned by a wealth of experience he plans to leverage in his new role. His tenure in the leadership roles at the Tertiary Health Services has been instrumental in sharpening his strategic planning skills, honing his management expertise, and refining his ability to lead collaboratively.
 
 Jinson's professional journey in healthcare has imbued him with a deep understanding of community needs, an invaluable skill set in political leadership. He has consistently demonstrated an ability to navigate complex systems, manage substantial budgets effectively, and lead diverse teams towards common goals. His experience in handling critical roles, such as managing operations during the challenging Covid-19 period, showcases his resilience and adaptability, qualities essential for political leadership.
 
@@ -353,7 +353,12 @@ Moreover, his strong ethical compass, coupled with a steadfast commitment to ser
     <!-- Image Sections -->
    
     <div class="image-section mx-auto mt-3 mb-3">
-      <h2>Image Gallery</h2>
+      <h2>
+        <span>Image Gallery</span>
+        <button class="btn btn-primary" onclick="toggleGalleryView()">
+          <i class="fas fa-images"></i> <!-- Font Awesome icon for images -->
+        </button>
+      </h2>
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner" id="carousel-inner">
           
@@ -633,13 +638,42 @@ function toggleGalleryView() {
     }
     function createGridItems() {
     const gridContainer = document.getElementById('gridContainer');
-    imageFileNames.forEach((filename, index) => {
-      const gridItem = document.createElement('div');
-      gridItem.classList.add('grid-item');
-      gridItem.innerHTML = `<img src="${filename}" alt="Image ${index + 1}">`;
-      gridContainer.appendChild(gridItem);
-    });
-  }
+    const imagesPerRow = 5; // Number of images to display per row
+    const totalRows = Math.ceil(imageFileNames.length / imagesPerRow);
+    let currentSetIndex = 0;
+
+    function showImages(startIndex) {
+        // Remove all existing rows
+        gridContainer.innerHTML = '';
+
+        // Display images for the current set
+        for (let i = 0; i < 1; i++) { // Display 2 rows
+            const row = document.createElement('div');
+            row.classList.add('row');
+            for (let j = 0; j < imagesPerRow; j++) {
+                const index = startIndex + i * imagesPerRow + j;
+                if (index < imageFileNames.length) {
+                    const gridItem = document.createElement('div');
+                    gridItem.classList.add('column'); // Adjust the column size as needed
+                    gridItem.innerHTML = `<img src="${imageFileNames[index]}" alt="Image ${index + 1}" style="width:100%">`;
+                    row.appendChild(gridItem);
+                }
+            }
+            gridContainer.appendChild(row);
+        }
+    }
+
+    function transitionToNextSet() {
+        currentSetIndex = (currentSetIndex + 1) % totalRows;
+        showImages(currentSetIndex * imagesPerRow);
+    }
+
+    // Initial display of images
+    showImages(currentSetIndex * imagesPerRow);
+
+    // Automatically transition to the next set after some duration (e.g., 5 seconds)
+    setInterval(transitionToNextSet, 5000); // Adjust the interval duration as needed
+}
     // Call the function to generate carousel items when the page loads
     window.onload = function() {
       generateCarouselItems();
@@ -675,25 +709,14 @@ function toggleGalleryView() {
 
     // Function to slide images in the grid view
     function slideImagesInGrid() {
-      const gridItems = document.querySelectorAll('#gridContainer .grid-item img');
-      const interval = 3000; // Interval in milliseconds for automatic sliding
+    // This function will simply display all images in the grid without any transitions
+    const gridItems = document.querySelectorAll('#gridContainer .grid-item img');
 
-      let currentIndex = 0;
-
-      setInterval(() => {
-        currentIndex = (currentIndex + 1) % gridItems.length;
-        gridItems.forEach((item, index) => {
-          if (index === currentIndex) {
-            item.style.opacity = 1;
-          } else {
-            item.style.opacity = 0;
-          }
-        });
-      }, interval);
-    }
-
-
-
+    // Show all images
+    gridItems.forEach((item) => {
+        item.style.opacity = 1;
+    });
+}
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 

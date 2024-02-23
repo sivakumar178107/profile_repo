@@ -1,4 +1,5 @@
 body {
+  
   background: linear-gradient(135deg, #335a74, #79478f);
   text-wrap: pretty;
   box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
@@ -12,7 +13,9 @@ body {
   font-size: 1rem; /* Bootstrap's default font size */
   line-height: 1.5; /* Bootstrap's default line height */
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 /* Adjust specific text elements */
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
@@ -24,44 +27,50 @@ p {
   margin-bottom: 1rem;
 }
 /* Custom CSS */
+/* Apply styles for screens smaller than or equal to 768px */
 @media (max-width: 768px) {
-  /* Apply styles for screens smaller than or equal to 768px */
   body {
-    font-size: 0.875rem; /* Adjust font size */
+    font-size: 0.875rem; /* Adjust font size for smaller screens */
   }
   .image-section h2 {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1rem; /* Adjust font size for headings */
   }
 }
 
+/* Apply styles for screens between 769px and 992px */
 @media (min-width: 769px) and (max-width: 992px) {
-  /* Apply styles for screens between 769px and 992px */
   body {
-    font-size: 1rem; /* Default font size */
+    font-size: 1rem; /* Default font size for medium screens */
   }
   .image-section h2 {
-    font-size: 1.25rem; /* Adjust font size */
+    font-size: 1.25rem; /* Adjust font size for headings */
   }
 }
 
-@media (min-width: 993px) and (max-width: 1200px) {
-  /* Apply styles for screens between 993px and 1200px */
+/* Apply styles for screens between 993px and 1200px */
+@media (min-width: 993px) and (max-width: 1300px) {
   body {
-    font-size: 1rem; /* Adjust font size */
+    font-size: 1rem; /* Default font size for large screens */
   }
   .image-section h2 {
-    font-size: 1.5rem; /* Adjust font size */
+    font-size: 1.5rem; /* Adjust font size for headings */
   }
 }
 
-@media (min-width: 1201px) {
-  /* Apply styles for screens larger than or equal to 1201px */
+/* Apply styles for screens larger than or equal to 1201px */
+@media (min-width: 1301px) {
   body {
-    font-size: 1.25rem; /* Adjust font size */
+    font-size: 1.25rem; /* Adjust font size for extra-large screens */
   }
   .image-section h2 {
-    font-size: 1.75rem; /* Adjust font size */
+    font-size: 1.75rem; /* Adjust font size for headings */
   }
+}
+.btn {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
 }
 
 /* Custom animation for fade-up effect */
@@ -252,7 +261,7 @@ section {
 .about-description {
   font-size: 1rem;
   color: #fff;
-  max-height: 41rem;
+  max-height: 39rem;
   overflow-y: auto;
   animation: slideInRight 1s ease;
 }
@@ -365,8 +374,7 @@ section {
 }
   /* Custom CSS for education cards */
 .education-card {
-  background-color: #f8f9fa; /* Background color of the card */
-  border: none; /* Remove border */
+  border: 1px solid #d0cccc;
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
   transition: transform 0.3s ease; /* Smooth transition on hover */
@@ -381,42 +389,50 @@ section {
 }
 
 .education-card h3 {
-  color: #333; /* Title color */
+  color: #ccd6e0; /* Title color */
   font-size: 1.2rem; /* Title font size */
   margin-bottom: 10px; /* Bottom margin for separation */
 }
 
 .education-card p {
-  color: #666; /* Text color */
+  color: #bcb9b9; /* Text color */
   font-size: 1rem; /* Text font size */
   margin-bottom: 0; /* Remove default bottom margin */
 }
 .experience-card {
-  background-color: #fff; /* Background color of the card */
+  border: 1px solid #d0cccc; /* Background color of the card */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
   padding: 20px; /* Add padding inside the card */
 }
 
 .experience-card h3 {
-  color: #0066cc; /* Title color */
+  color: #ccd6e0; /* Title color */
   font-size: 1.5rem; /* Title font size */
   margin-bottom: 10px; /* Bottom margin for separation */
 }
 
 .experience-card p {
-  color: #333; /* Text color */
+  color: #bcb9b9; /* Text color */
   font-size: 1.1rem; /* Text font size */
   margin-bottom: 5px; /* Bottom margin for separation */
 }
 
 .experience-card ul {
-  list-style-type: none; /* Remove bullet points */
-  padding-left: 0; /* Remove default padding */
+  
+           
+            color: #f2f5ef;
+}
+@media (min-width: 768px) {
+  /* Apply margin-left: 20px; only at md breakpoint */
+  .experience-card ul {
+    list-style-type: disc;
+      margin-left: 20px;
+  }
 }
 
 .experience-card ul li {
-  color: #555; /* Text color for list items */
+  color: #cbc5c5; /* Text color for list items */
   margin-bottom: 5px; /* Bottom margin for separation */
 }
 .custom-image-container {
@@ -467,6 +483,17 @@ section {
   border-radius: 50%;
   font-size: 20px;
   transition: background-color 0.3s;
+}
+.btn-custom {
+  border-radius: 30px; /* Adjust border radius as needed */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px; /* Adjust font size as needed */
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+}
+.btn-custom:hover {
+  border-color: rgba(0, 0, 0, 0.05); /* Semi-transparent background on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Adjust box shadow on hover */
 }
 
 .custom-social-icons li a:hover {

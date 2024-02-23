@@ -138,6 +138,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
+ 
   width: 100%;
   height: 100%;
   color: white;
@@ -257,6 +258,7 @@ section {
 }
 
 .custom-btn:hover {
+  color: #000;
   transform: scale(1.05);
 }
 
@@ -451,6 +453,7 @@ section {
 }
 .custom-image-container {
   position: relative;
+  min-height: 30rem;
   width: 100%;
 }
 
@@ -492,7 +495,7 @@ section {
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
-  background-color: #007bff;
+  
   color: #fff;
   border-radius: 50%;
   font-size: 1.6rem;

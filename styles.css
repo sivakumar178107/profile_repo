@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
-  
   background: linear-gradient(135deg, #335a74, #79478f);
   text-wrap: pretty;
   box-shadow: 0 30px 30px -20.4rem rgba(#4133B7, .25);
@@ -96,13 +97,26 @@ section {
 #achievements,
 #community-involvement,
 #family-background {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
   border-radius: 16px;
   box-shadow: 0 30px 30px -20.4rem rgba(#4133B7, .25);
   color: white;
   box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.3);
 }
-
-
+.hidden{
+  opacity: 0;
+  filter: blur(5px);
+  transition: all 1s;
+  transform: translateX(-100);
+}
+.showw{
+  opacity: 1;
+  filter: blur(0);
+  transition: all 1s;
+  transform: translateX(0);
+}
 
 
 /* Additional styles for images */

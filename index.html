@@ -69,7 +69,7 @@
     </nav>
     
     <!-- Background Image with Overlay -->
-    <div class="custom-image-container">
+    <div class="hidden custom-image-container">
       <img src="bg.jpeg" class="d-block w-100 object-fit-cover" alt="Image">
       <div class="custom-image-overlay fade-in">
           <section class="custom-social-media">
@@ -97,7 +97,7 @@
   </div>
   
     
-<section id="about-me" class="about-section ">
+<section id="about-me" class="hidden about-section ">
   <div class="container">
     <div class="row">
      
@@ -146,7 +146,7 @@
   </div>
 </section>
 
-<div class="custom-card-container mb-5">
+<div class="hidden custom-card-container mb-5">
   <div class="custom-card">
     <div class="custom-card-body">
       <h5 class="custom-card-title display-5"><i class="fas fa-handshake custom-icon me-3"></i>Values That Endure: Upholding My Nursing Pledge Through All Career Paths</h5>
@@ -168,7 +168,7 @@
 
  
 
-<div class="gap-2 d-flex flex-wrap justify-content-center mb-5 mx-auto" style="width: 85%;">
+<div class="hidden gap-2 d-flex flex-wrap justify-content-center mb-5 mx-auto" style="width: 85%;">
   <!-- <a class="btn btn-custom btn-outline-light" data-bs-toggle="collapse" href="#personal-info" role="button" aria-expanded="false" aria-controls="personal-info">Personal Information</a> -->
   <a class="btn btn-custom btn-outline-light" data-bs-toggle="collapse" href="#professional-experience" role="button" aria-expanded="false" aria-controls="professional-experience">Professional Experience</a>
   <a class="btn btn-custom btn-outline-light" data-bs-toggle="collapse" href="#education" role="button" aria-expanded="false" aria-controls="education">Education</a>
@@ -179,7 +179,7 @@
 
 
         
-        <div class="container">
+        
           <!-- Personal Information -->
           <section id="personal-info" class="mb-5 collapse collapse-horizontal">
             <h2 class="display-6 mb-4">Personal Information</h2>
@@ -194,7 +194,7 @@
           </section>
         
           <!-- Professional Experience -->
-          <section id="professional-experience" class="mb-5 collapse collapse-horizontal">
+          <section id="professional-experience" class="hidden mb-5 collapse collapse-horizontal" 2.5rem>
             <h2 class="display-6 mb-4"><i class="fas fa-briefcase me-3"></i>Professional Experience</h2>
             
             <!-- Charles Darwin University Adjunct Lecturer -->
@@ -262,7 +262,7 @@
         
         
           <!-- Education -->
-          <section id="education" class="mb-5 collapse collapse-horizontal">
+          <section id="education" class="hidden mb-5 collapse collapse-horizontal" 2.5rem>
             <h2 class="display-6 mb-4"><i class="fas fa-graduation-cap me-3"></i>Education</h2>
             
             <div class="row mb-4">
@@ -326,7 +326,7 @@
         
         
           <!-- Skills & Achievements -->
-          <section id="skills-achievements" class="mb-5 collapse collapse-horizontal skills-achievements-card">
+          <section id="skills-achievements" class="hidden mb-5 collapse collapse-horizontal skills-achievements-card" 2.5rem>
             <h2 class="display-6 mb-4">Skills & Achievements</h2>
             <div class="row">
                 <div class="col-md-12 experience-card mx-3 mb-3">
@@ -350,7 +350,7 @@
         
         
           <!-- Community Involvement -->
-          <section id="community-involvement" class="mb-5 collapse collapse-horizontal">
+          <section id="community-involvement" class="hidden mb-5 collapse collapse-horizontal" 2.5rem>
             <h2 class="display-6 mb-4">Community Involvement</h2>
             <ul>
               <li>President – Darwin Malayalee Association, Aug 2023 - Present</li>
@@ -361,7 +361,7 @@
           </section>
         
           <!-- Family Background -->
-          <section id="family-background" class="mb-5 collapse collapse-horizontal">
+          <section id="family-background" class="hidden mb-5 collapse collapse-horizontal" 2.5rem>
             <h2 class="display-6 mb-4">Political Affiliations - Family</h2>
             <p>Jinson comes from a family with a rich political heritage in Kerala, India:</p>
             <h3>Charls Antony (Father)</h3>
@@ -382,9 +382,9 @@
             </ul>
         </section>
         
-        </div>
+      
         
-        <div class="mx-auto mb-5" style="width:85%">
+        <div class="hidden mx-auto mb-5" style="width:85%">
           <h2>FAQ's</h2>
         <div class="accordion accordion-flush" id="accordionExample">
           <div class="accordion-item">
@@ -440,7 +440,7 @@
     
     <!-- Image Sections -->
    
-    <div class="image-section mx-auto mb-5">
+    <div class="hidden image-section mx-auto mb-5">
       <h2>
         <span>Image Gallery</span>
         <button class="btn btn-outline-light me-1" onclick="toggleGalleryView()">
@@ -473,8 +473,23 @@
       </div>
     </footer>
     
-  <script>
-
+  <script defer>
+    const observer = new IntersectionObserver((entries)=>{
+      entries.forEach((entry)=>{
+        
+        if(entry.isIntersecting){
+          
+          entry.target.classList.remove('hidden');
+          entry.target.classList.add('showw');
+        }
+        else{
+          entry.target.classList.remove('showw');
+          entry.target.classList.add('hidden');
+        }
+      });
+    });
+  const hiddenele=document.querySelectorAll('.hidden');
+  hiddenele.forEach((el)=>observer.observe(el));
 function toggleGalleryView() {
       const carousel = document.getElementById('carouselExampleAutoplaying');
       const gridContainer = document.getElementById('gridContainer');
@@ -627,31 +642,31 @@ function toggleGalleryView() {
     };
 
     // Function to check if an element is in viewport
-    function isInViewport(ele) {
-      const { top, bottom } = ele.getBoundingClientRect();
-      const vHeight = (window.innerHeight || document.documentElement.clientHeight);
+    // function isInViewport(ele) {
+    //   const { top, bottom } = ele.getBoundingClientRect();
+    //   const vHeight = (window.innerHeight || document.documentElement.clientHeight);
 
-      return (
-        (top > 0 || bottom > 0) &&
-        top < vHeight
-      );
-    }
+    //   return (
+    //     (top > 0 || bottom > 0) &&
+    //     top < vHeight
+    //   );
+    // }
 
-    // Function to handle scroll event
-    function handleScroll() {
-      var sections = document.querySelectorAll('section');
-      sections.forEach(function(section) {
-        if (isInViewport(section)) {
-          section.classList.add('fade-up');
+    // // Function to handle scroll event
+    // function handleScroll() {
+    //   var sections = document.querySelectorAll('section');
+    //   sections.forEach(function(section) {
+    //     if (isInViewport(section)) {
+    //       section.classList.add('fade-up');
           
-        }
-      });
-    }
+    //     }
+    //   });
+    // }
 
-    // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    // Call handleScroll once on page load to check initial state
-    handleScroll();
+    // // Add scroll event listener
+    // window.addEventListener('scroll', handleScroll);
+    // // Call handleScroll once on page load to check initial state
+    // handleScroll();
 
     // Function to slide images in the grid view
     function slideImagesInGrid() {

@@ -396,9 +396,6 @@ section {
   transition: transform 0.3s ease; /* Smooth transition on hover */
 }
 
-.education-card:hover {
-  transform: translateY(-0.4rem); /* Lift card slightly on hover */
-}
 
 .education-card .card-body {
   padding: 1.6rem; /* Add padding inside the card */
@@ -476,8 +473,8 @@ section {
 }
 
 .custom-image-overlay h1,
-.custom-image-overlay p,
-.custom-image-overlay .btn {
+.custom-image-overlay p
+ {
   color: white; /* Text color */
 }
 
@@ -495,7 +492,6 @@ section {
   width: 2.5rem;
   height: 2.5rem;
   line-height: 2.5rem;
-  
   color: #fff;
   border-radius: 50%;
   font-size: 1.6rem;

@@ -2,7 +2,7 @@ body {
   
   background: linear-gradient(135deg, #335a74, #79478f);
   text-wrap: pretty;
-  box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+  box-shadow: 0 30px 30px -20.4rem rgba(#4133B7, .25);
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
@@ -76,7 +76,7 @@ p {
 /* Custom animation for fade-up effect */
 .fade-up {
   opacity: 1;
-  transform: translateY(20px);
+  transform: translateY(1.6rem);
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
@@ -97,9 +97,9 @@ section {
 #community-involvement,
 #family-background {
   border-radius: 16px;
-  box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+  box-shadow: 0 30px 30px -20.4rem rgba(#4133B7, .25);
   color: white;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.3);
 }
 
 
@@ -193,17 +193,17 @@ section {
   max-width: 85%; /* Adjust as needed */
   border-radius: 1rem;
   transition: transform 0.3s ease;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.3);
 }
 
 .custom-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-0.4rem);
 }
 
 .custom-card-body {
   
   border-radius: 16px;
-  box-shadow: 0 30px 30px -25px rgba(#4133B7, .25);
+  box-shadow: 0 30px 30px -20.4rem rgba(#4133B7, .25);
   color: white;
   border-radius: 1rem;
   padding: 1.5rem;
@@ -311,7 +311,7 @@ section {
 
 .footer {
   background-color: #0b7ff2;
-  padding: 20px 0;
+  padding: 1.6rem 0;
   text-align: center;
 }
 
@@ -327,7 +327,7 @@ section {
 
 .social-media .social-icons li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0.8rem;
 }
 
 .social-media .social-icons li:last-child {
@@ -336,13 +336,13 @@ section {
 
 .social-media .social-icons li a {
   display: block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   background-color: #007bff;
   color: #fff;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 1.6rem;
   transition: background-color 0.3s;
 }
 
@@ -375,23 +375,23 @@ section {
   /* Custom CSS for education cards */
 .education-card {
   border: 1px solid #d0cccc;
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  border-radius: 0.8rem; /* Rounded corners */
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1); /* Shadow effect */
   transition: transform 0.3s ease; /* Smooth transition on hover */
 }
 
 .education-card:hover {
-  transform: translateY(-5px); /* Lift card slightly on hover */
+  transform: translateY(-0.4rem); /* Lift card slightly on hover */
 }
 
 .education-card .card-body {
-  padding: 20px; /* Add padding inside the card */
+  padding: 1.6rem; /* Add padding inside the card */
 }
 
 .education-card h3 {
   color: #ccd6e0; /* Title color */
   font-size: 1.2rem; /* Title font size */
-  margin-bottom: 10px; /* Bottom margin for separation */
+  margin-bottom: 0.8rem; /* Bottom margin for separation */
 }
 
 .education-card p {
@@ -401,21 +401,21 @@ section {
 }
 .experience-card {
   border: 1px solid #d0cccc; /* Background color of the card */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  padding: 20px; /* Add padding inside the card */
+  border-radius: 0.8rem; /* Rounded corners */
+  box-shadow: 0 0 0.8rem rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 1.2rem; /* Add padding inside the card */
 }
 
 .experience-card h3 {
   color: #ccd6e0; /* Title color */
   font-size: 1.5rem; /* Title font size */
-  margin-bottom: 10px; /* Bottom margin for separation */
+  margin-bottom: 0.8rem; /* Bottom margin for separation */
 }
 
 .experience-card p {
   color: #bcb9b9; /* Text color */
   font-size: 1.1rem; /* Text font size */
-  margin-bottom: 5px; /* Bottom margin for separation */
+  margin-bottom: 0.4rem; /* Bottom margin for separation */
 }
 
 .experience-card ul {
@@ -424,16 +424,16 @@ section {
             color: #f2f5ef;
 }
 @media (min-width: 768px) {
-  /* Apply margin-left: 20px; only at md breakpoint */
+  /* Apply margin-left: 1.6rem; only at md breakpoint */
   .experience-card ul {
     list-style-type: disc;
-      margin-left: 20px;
+      margin-left: 1.6rem;
   }
 }
 
 .experience-card ul li {
   color: #cbc5c5; /* Text color for list items */
-  margin-bottom: 5px; /* Bottom margin for separation */
+  margin-bottom: 0.4rem; /* Bottom margin for separation */
 }
 .custom-image-container {
   position: relative;
@@ -455,7 +455,7 @@ section {
 }
 
 .custom-image-overlay .custom-social-media {
-  padding: 20px; /* Add padding to the social media section */
+  padding: 1.6rem; /* Add padding to the social media section */
 }
 
 .custom-image-overlay h1,
@@ -466,7 +466,7 @@ section {
 
 .custom-social-icons li {
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0.8rem;
 }
 
 .custom-social-icons li:last-child {
@@ -475,18 +475,18 @@ section {
 
 .custom-social-icons li a {
   display: block;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
   background-color: #007bff;
   color: #fff;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 1.6rem;
   transition: background-color 0.3s;
 }
 .btn-custom {
   border-radius: 30px; /* Adjust border radius as needed */
-  padding: 10px 20px; /* Adjust padding as needed */
+  padding: 0.8rem 1.6rem; /* Adjust padding as needed */
   font-size: 16px; /* Adjust font size as needed */
   transition: all 0.3s ease;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
@@ -503,5 +503,5 @@ section {
 
 .custom-btn {
   margin-top: 1rem;
-  margin-right: 10px;
+  margin-right: 0.8rem;
 }
